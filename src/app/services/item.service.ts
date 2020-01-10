@@ -9,7 +9,7 @@ export class ItemService {
 
   constructor() {
     for (let index = 0; index < 1000; index++) {
-      this.createItem("To-do " + (index + 1), "Using a InfiniteList (not yet) to show the data ");
+      this.createItem("To-do " + (index + 1), "Using a VirtualList to show the data ");
     }
   }
 
