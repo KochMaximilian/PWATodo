@@ -7,16 +7,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="item" padding>
-  <form [formGroup]="edit_item_form" (ngSubmit)="updateItem(edit_item_form.value)">
+<ion-content *ngIf="item">
+  <form class="ContentPadding" [formGroup]="edit_item_form" (ngSubmit)="updateItem(edit_item_form.value)">
     <ion-item>
-      <ion-label color="primary" position="floating">Title</ion-label>
-      <ion-input type="text" formControlName="title" required></ion-input>
+      <ion-label class ="UpdateLabel" color="primary" position="floating">Title</ion-label>
+      <ion-input class ="UpdateDescription" type="text" formControlName="title" required></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label color="primary" position="floating">Description</ion-label>
-      <ion-input type="text" formControlName="description" required></ion-input>
+    <ion-item class="ItemPadding">
+      <ion-label class ="UpdateLabel" color="primary" position="floating">Description</ion-label>
+      <ion-input class ="UpdateDescription" type="text" formControlName="description" required></ion-input>
     </ion-item>
-    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
+    <ion-button class="submit-btn buttonUpdate" expand="block" type="submit" [disabled]="!edit_item_form.valid">Update</ion-button>
   </form>
 </ion-content>
