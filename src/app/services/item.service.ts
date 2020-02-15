@@ -8,7 +8,7 @@ export class ItemService {
   items: Array<any> = []
 
   constructor() {
-    for (let index = 0; index < 1000; index++) {
+    for (let index = 0; index < 5000; index++) {
       this.createItem("Note " + (index + 1), "Description: ");
     }
   }
